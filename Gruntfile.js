@@ -45,6 +45,14 @@ module.exports = function (grunt) {
       }
     },
 
+    // Generate a changelog using connvetional-changelog
+    changelog: {
+      options: {
+        // Run emacs before finishing task to manually polish changelog
+        editor: 'emacsclient -t -a=\\\"\\\"'
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
